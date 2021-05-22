@@ -1,0 +1,80 @@
+.content {
+  position: absolute;
+  top: 80px;
+  left: 250px;
+  z-index: 1;
+  width: calc(100vw - 250px);
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1em;
+  /* grid-auto-rows: 300px; */
+}
+
+.content__wrapper {
+  /* border: solid red; */
+}
+
+.content__thumbnail {
+  position: relative;
+  /* height: 65%; */
+}
+
+.content__thumbnail > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content__thumbnail > span {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.1em 0.2em;
+  color: #fff;
+}
+
+.content__info {
+  display: flex;
+  /* height: 35%; */
+}
+
+.content__details {
+  flex: 1;
+  margin-left: 1em;
+}
+
+.content__details > h3 {
+  font-size: 1rem;
+  width: 90%;
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__details > h4,
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* width when menu is shriked */
+.content__menu-active {
+  left: 90px;
+  width: calc(100vw - 90px);
+}
+
+.content__loader {
+  width: 100px;
+  height: 100px;
+  border: 2px solid royalblue;
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    left: 0;
+    width: 100vw;
+  }
+}
